@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="theme-1">
+  <main class="main-container">
+    <header class="top-container">
+      <h1>calc</h1>
+      <div class="theme-container">
+        <div class="theme-numbers"><p>1</p><p>2</p><p>3</p></div>
+        <p class="theme-title">THEME</p>
+        <div class="theme-toggle-container">
+          <div class="left-side-curve"></div>
+          <div class="right-side-curve"></div>
+          <div class="theme-toggle-btn"></div>
+        </div>
+      </div>
+    </header>
+    <div class="display-container">
+      <h1 id="display-screen">0</h1>
+    </div>
+    <div class="keypad">
+      <button id="b-7" value="7" class="num-btn btn">7</button>
+      <button id="b-8" value="8" class="num-btn btn">8</button>
+      <button id="b-9" value="9" class="num-btn btn">9</button>
+      <button id="b-del" class="del-btn btn">DEL</button>
+      <button id="b-4" value="4" class="num-btn btn">4</button>
+      <button id="b-5" value="5" class="num-btn btn">5</button>
+      <button id="b-6" value="6" class="num-btn btn">6</button>
+      <button id="b-plus" value="+" class="arth-btn btn">+</button>
+      <button id="b-1" value="1" class="num-btn btn">1</button>
+      <button id="b-2" value="2" class="num-btn btn">2</button>
+      <button id="b-3" value="3" class="num-btn btn">3</button>
+      <button id="b-minus" value="-" class="arth-btn btn">-</button>
+      <button id="b-decimal" value="." class="num-btn btn">.</button>
+      <button id="b-0" value="0" class="num-btn btn">0</button>
+      <button id="b-divide" value="/" class="arth-btn btn">/</button>
+      <button id="b-multiply" value="x" class="arth-btn btn">x</button>
+      <button id="b-reset" class="reset-btn btn">RESET</button>
+      <button id="b-equals" class="equals-btn btn">=</button>
+    </div>
+  </main>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Umair</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
