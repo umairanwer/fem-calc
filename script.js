@@ -127,8 +127,7 @@ function toggleTheme(e){
 }
 
 function toggleSw(){
-    console.log(`toggle ${selTheme}`);
-    var themeSwitchBtn = document.querySelector(".theme-toggle-container");
+    console.log(`toggle ${themeSwitchBtn}`);
     switch(selTheme){
         case 1:
             themeSwitchBtn.style.justifyContent = 'flex-start';
