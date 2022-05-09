@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+    font-family: 'League Spartan', sans-serif;
+
+    /*THEME 1*/
+    --t-1-main-bg: hsl(222, 26%, 31%);
+    --t-1-toggle-bg:hsl(223, 31%, 20%);
+    --t-1-keypad-bg: hsl(223, 31%, 20%);
+    --t-1-screen-bg: hsl(224, 36%, 15%);
+
+    --t-1-key-rstdel-bg: hsl(225, 21%, 49%);
+    --t-1-key-rstdel-shadow: hsl(224, 28%, 35%);
+
+    --t-1-key-eq-bg: hsl(6, 63%, 50%);
+    --t-1-key-eq-shadow: hsl(6, 70%, 34%);
+    --t-1-key-toogle:hsl(6, 63%, 50%);
+
+    --t-1-key-num-bg: hsl(30, 25%, 89%);
+    --t-1-key-num-shadow: hsl(28, 16%, 65%);
+
+    --t-1-num-text: hsl(221, 14%, 31%);
+    --t-1-top-con-color: white;
+
+    /*THEME 2*/
+    --t-2-main-bg: hsl(0, 0%, 90%);
+    --t-2-toggle-bg:hsl(0, 5%, 81%);
+    --t-2-keypad-bg: hsl(0, 5%, 81%);
+    --t-2-screen-bg: hsl(0, 0%, 93%);
+
+    --t-2-key-rstdel-bg: hsl(185, 42%, 37%);
+    --t-2-key-rstdel-shadow: hsl(185, 58%, 25%);
+
+    --t-2-key-eq-bg: hsl(25, 98%, 40%);
+    --t-2-key-eq-shadow: hsl(25, 99%, 27%);
+    --t-2-key-toogle:hsl(25, 98%, 40%);
+
+    --t-2-key-num-bg: hsl(45, 7%, 89%);
+    --t-2-key-num-shadow: hsl(35, 11%, 61%);
+
+    --t-2-num-text: hsl(60, 10%, 19%);
+    --t-2-top-con-color: hsl(60, 10%, 19%);
+
+    /*THEME 3*/
+    --t-3-main-bg: hsl(268, 75%, 9%);
+    --t-3-toggle-bg:hsl(268, 71%, 12%);
+    --t-3-keypad-bg: hsl(268, 71%, 12%);
+    --t-3-screen-bg: hsl(268, 71%, 12%);
+
+    --t-3-key-rstdel-bg: hsl(281, 89%, 26%);
+    --t-3-key-rstdel-shadow: hsl(185, 58%, 25%);
+
+    --t-3-key-eq-bg: hsl(176, 100%, 44%);
+    --t-3-key-eq-shadow: hsl(177, 92%, 70%);
+    --t-3-key-toogle:hsl(176, 100%, 44%);
+
+    --t-3-key-num-bg: hsl(268, 47%, 21%);
+    --t-3-key-num-shadow: hsl(290, 70%, 36%);
+
+    --t-3-num-text: hsl(52, 100%, 62%);
+    --t-3-top-con-color: hsl(52, 100%, 62%);
+}
+
+body{
+    background-color: var(--main-bg);
+}
+
+.main-container{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.top-container{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: var(--top-con-color);
+}
+.theme-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+    font-size: 1.5rem;
+}
+.theme-numbers{
+    grid-column-start: 2;
+    display: flex;
+    width: 4rem;
+    justify-content: space-between;
+}
+.theme-title{
+    grid-row-start: 2;
+    margin-right: 2rem;
+    align-self: center;
+}
+.theme-toggle-container{
+    position: relative;
+    width: 100%;
+    background-color: var(--toggle-bg);
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    justify-content: flex-start;
+}
+.theme-toggle-container .left-side-curve,
+.theme-toggle-container .right-side-curve{
+    position: absolute;
+    left: -1rem;
+    height: 100%;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--toggle-bg);
+}
+.theme-toggle-container .right-side-curve{
+    right: -1rem;
+    left: unset;
+}
+.theme-toggle-btn{
+    position: relative;
+    height: 66%;
+    width: 1.3rem;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--key-toogle);
+    z-index: 2;
+}
+.display-container{
+    height: 8rem;
+    width: 100%;
+    border: 1px solid ;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--screen-bg);
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+
+    color: var(--top-con-color);
+}
+
+.keypad{
+    --length: 6rem;
+    
+    background-color:red;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    border-radius: 1rem;
+    row-gap: 1.5rem;
+    column-gap: 1.1rem;
+
+    background-color: var(--keypad-bg);
+}
+
+.btn{
+    height: var(--length);
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0.5rem var(--key-num-shadow);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 3.2rem;
+    
+    background-color: var(--key-num-bg);
+}
+
+.reset-btn{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+    font-size: 2rem;
+
+}
+.del-btn{
+    font-size: 2rem;
+
+}
+
+.reset-btn, .del-btn{
+    background-color: var(--key-rstdel-bg);
+    box-shadow: 0 0.5rem var(--key-rstdel-shadow);
+    color: white;
+}
+.equals-btn{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    width: 100%;
+    background-color: var(--key-eq-bg);
+    box-shadow: 0 0.5rem var(--key-eq-shadow);
+}
+
+/*Separate Classes for each theme
+These will be toggled using JS*/
+
+.theme-1{
+    --main-bg: var(--t-1-main-bg);
+    --toggle-bg:var(--t-1-toggle-bg);
+    --keypad-bg: var(--t-1-keypad-bg);
+    --screen-bg: var(--t-1-screen-bg);
+
+    --key-rstdel-bg: var(--t-1-key-rstdel-bg);
+    --key-rstdel-shadow: var(--t-1-key-rstdel-shadow);
+
+    --key-eq-bg: var(--t-1-key-eq-bg);
+    --key-eq-shadow: var(--t-1-key-eq-shadow);
+    --key-toogle:var(--t-1-key-toogle);
+
+    --key-num-bg: var(--t-1-key-num-bg);
+    --key-num-shadow: var(--t-1-key-num-shadow);
+
+    --num-text: var(--t-1-key-num-text);
+    --top-con-color: var(--t-1-top-con-color);
+}
+
+.theme-2{
+    --main-bg: var(--t-2-main-bg);
+    --toggle-bg:var(--t-2-toggle-bg);
+    --keypad-bg: var(--t-2-keypad-bg);
+    --screen-bg: var(--t-2-screen-bg);
+
+    --key-rstdel-bg: var(--t-2-key-rstdel-bg);
+    --key-rstdel-shadow: var(--t-2-key-rstdel-shadow);
+
+    --key-eq-bg: var(--t-2-key-eq-bg);
+    --key-eq-shadow: var(--t-2-key-eq-shadow);
+    --key-toogle:var(--t-2-key-toogle);
+
+    --key-num-bg: var(--t-2-key-num-bg);
+    --key-num-shadow: var(--t-2-key-num-shadow);
+
+    --num-text: var(--t-2-key-num-text);
+    --top-con-color: var(--t-2-top-con-color);
+
+}
+
+.theme-3{
+    --main-bg: var(--t-3-main-bg);
+    --toggle-bg:var(--t-3-toggle-bg);
+    --keypad-bg: var(--t-3-keypad-bg);
+    --screen-bg: var(--t-3-screen-bg);
+
+    --key-rstdel-bg: var(--t-3-key-rstdel-bg);
+    --key-rstdel-shadow: var(--t-3-key-rstdel-shadow);
+
+    --key-eq-bg: var(--t-3-key-eq-bg);
+    --key-eq-shadow: var(--t-3-key-eq-shadow);
+    --key-toogle:var(--t-3-key-toogle);
+
+    --key-num-bg: var(--t-3-key-num-bg);
+    --key-num-shadow: var(--t-3-key-num-shadow);
+
+    --num-text: var(--t-3-key-num-text);
+    --top-con-color: var(--t-3-top-con-color);
+
+}
