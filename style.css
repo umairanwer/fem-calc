@@ -287,5 +287,9 @@ These will be toggled using JS*/
 @media screen and (min-width: 1000px) {
     .main-container{
         width: 55rem;
+        height: 97vh;
+    }
+    .keypad{
+        gap: 2rem;
     }
 }
