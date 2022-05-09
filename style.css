@@ -175,7 +175,7 @@ body{
     box-shadow: 0 0.5rem var(--key-num-shadow);
     font-family: 'League Spartan', sans-serif;
     font-size: 3.2rem;
-    
+    color: var(--num-text);
     background-color: var(--key-num-bg);
 }
 
@@ -202,8 +202,20 @@ body{
     width: 100%;
     background-color: var(--key-eq-bg);
     box-shadow: 0 0.5rem var(--key-eq-shadow);
+    color: white;
 }
 
+footer{
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    color: var(--top-con-color);
+}
+footer a:link{
+    color: var(--key-eq-bg);
+    text-decoration: none;
+}
 /*Separate Classes for each theme
 These will be toggled using JS*/
 
@@ -223,7 +235,7 @@ These will be toggled using JS*/
     --key-num-bg: var(--t-1-key-num-bg);
     --key-num-shadow: var(--t-1-key-num-shadow);
 
-    --num-text: var(--t-1-key-num-text);
+    --num-text: var(--t-1-num-text);
     --top-con-color: var(--t-1-top-con-color);
 }
 
@@ -243,7 +255,7 @@ These will be toggled using JS*/
     --key-num-bg: var(--t-2-key-num-bg);
     --key-num-shadow: var(--t-2-key-num-shadow);
 
-    --num-text: var(--t-2-key-num-text);
+    --num-text: var(--t-2-num-text);
     --top-con-color: var(--t-2-top-con-color);
 
 }
@@ -264,7 +276,16 @@ These will be toggled using JS*/
     --key-num-bg: var(--t-3-key-num-bg);
     --key-num-shadow: var(--t-3-key-num-shadow);
 
-    --num-text: var(--t-3-key-num-text);
+    --num-text: var(--t-3-num-text);
     --top-con-color: var(--t-3-top-con-color);
+}
+.theme-3 .equals-btn{
+    color: black;
+}
 
+
+@media screen and (min-width: 1000px) {
+    .main-container{
+        width: 55rem;
+    }
 }
